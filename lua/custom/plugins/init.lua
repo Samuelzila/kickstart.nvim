@@ -57,4 +57,5 @@ return {
       { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
     },
   },
+  { 'Civitasv/cmake-tools.nvim', opts = { terminal = { prefix_name = '[CMakeTools]: ' } } },
 }
