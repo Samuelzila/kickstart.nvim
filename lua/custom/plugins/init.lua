@@ -58,4 +58,5 @@ return {
     },
   },
   { 'Civitasv/cmake-tools.nvim', opts = { terminal = { prefix_name = '[CMakeTools]: ' } } },
+  { 'github/copilot.vim' },
 }
