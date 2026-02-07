@@ -8,6 +8,9 @@ vim.o.linebreak = true
 
 vim.o.relativenumber = true
 
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+
 vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false,
