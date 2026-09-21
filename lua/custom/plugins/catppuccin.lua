@@ -6,7 +6,8 @@ return {
     event = 'VimEnter',
     config = function()
       require('catppuccin').setup {
-        flavour = 'latte',
+        flavour = 'mocha',
+        transparent_background = true,
       }
       vim.cmd.colorscheme 'catppuccin'
 
@@ -15,6 +16,24 @@ return {
         require('catppuccin').setup { transparent_background = not current_transparency }
         vim.cmd.colorscheme 'catppuccin'
       end, {})
+
+      vim.keymap.set('n', '<leader>tc', function()
+        local current_flavour = package.loaded['catppuccin'].options.flavour
+        if current_flavour == 'mocha' then
+          require('catppuccin').setup {
+            flavour = 'latte',
+            transparent_background = false
+          }
+        else
+          require('catppuccin').setup {
+            flavour = 'mocha',
+            transparent_background = true
+          }
+        end
+        vim.cmd.colorscheme 'catppuccin'
+      end, { desc = 'Toggle Catppuccin flavour' })
     end,
+
   },
 }
+
