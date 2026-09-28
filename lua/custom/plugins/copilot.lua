@@ -6,5 +6,8 @@ vim.keymap.set('i', '<C-L>', '<plug>(copilot-accept-word)')
 vim.g.copilot_no_tab_map = true
 
 return {
-  { 'github/copilot.vim' },
+  {
+    'github/copilot.vim',
+    cmd = 'Copilot',
+  },
 }
